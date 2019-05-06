@@ -1,7 +1,6 @@
-node 'node1' {
+node 'node3' {
 
-notify{"*****NODE1 Message******":}
-include base
+notify{"*****NODE3 Message******":}
 
 class {'::tomcat':
 
@@ -26,26 +25,4 @@ node default {
   
   '
 }
-}
-
-node 'node2' { 
-
-
-notify{ "*****NODE2 BLOCK******" :}
-
-class{'::tomcat':
-
-user    => 'tomcat',
-group   => 'root',
-service_state  => 'running',
-catalina_pid    => '/tmp/tomcat.pid',
-
-}
-
-include java::install
-include base
-include tomcat::install
-include tomcat::config
-include tomcat::service
-
 }
