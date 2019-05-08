@@ -1,8 +1,8 @@
 node 'node1' {
 
 notify{"*****NODE1 Message******":}
-include base
 
+include ntp
 class {'::tomcat':
 
  user   => 'tomcat',

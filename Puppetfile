@@ -5,6 +5,7 @@ forge 'https://forge.puppet.com'
 #mod 'puppetlabs/inifile',     '2.2.1'
 mod 'puppetlabs-ntp'           
 mod 'puppetlabs-haproxy',       '3.0.1'
+mod 'puppetlabs-stdlib',        '4.13.1'
 #mod 'puppetlabs/stdlib',      '4.25.1'
 #mod 'puppetlabs/concat',      '4.2.1'
 
