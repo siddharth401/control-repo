@@ -3,14 +3,11 @@ node 'node1' {
 notify{"*****NODE1 Message******":}
 
 include ntp
-class {'::tomcat':
+include tomcat
+include base
 
- user   => 'tomcat',
- group  => 'tomcat',
- service_state  => 'running',
- 
 }
-}
+
 
 node default { 
    
@@ -33,19 +30,8 @@ node 'node2' {
 
 notify{ "*****NODE2 BLOCK******" :}
 
-class{'::tomcat':
 
-user    => 'tomcat',
-group   => 'root',
-service_state  => 'running',
-catalina_pid    => '/tmp/tomcat.pid',
-
-}
-
-include java::install
-include base
-include tomcat::install
-include tomcat::config
-include tomcat::service
+include tomcat
+include ntp
 
 }

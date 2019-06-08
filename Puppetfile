@@ -21,3 +21,5 @@ mod 'tomcat',
 mod 'java',
   :git    => 'https://github.com/siddharth401/puppet-module-java.git'
 #  :branch => 'docs_experiment'
+mod 'base',
+   :git	  => 'https://github.com/siddharth401/puppet-module-base.git'
